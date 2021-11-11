@@ -34,9 +34,10 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-md-2">
-                <app-button (clicked)="onVoltar()" title="Voltar"></app-button>&nbsp;
-                <app-button (clicked)="onSave()" title="Salvar" [isDisabled]="form.invalid"></app-button>
+            <div class="col-md-12" style="text-align: left">
+                    <app-button (clicked)="onVoltar()" title="Voltar"></app-button>&nbsp;
+                    <app-button (clicked)="onSave()" title="Salvar" [isDisabled]="form.invalid"></app-button>
+              
             </div>
         </div>
     </div>

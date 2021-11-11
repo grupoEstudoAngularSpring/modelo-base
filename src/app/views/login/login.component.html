@@ -2,13 +2,13 @@
     <div id="layoutAuthentication-content">
         <main>
             <div class="container">
-                <div class="row justify-content-center"> 
+                <div class="row justify-content-center">
                     <div class="col-lg-5">
-                        <div class="card shadow-lg border-0 rounded-lg mt-5 bg-color-padrao text-white">
-                            <div class="card-header">
-                                <h3 class="text-center my-4">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5 ">
+                            <div class="card-header bg-color-padrao text-white">
+                                <h5 class="text-center my-2">
                                     {{ cadastrando ? 'Cadastro de Novo Usuário' : 'Fazer Login'}}
-                                </h3>
+                                </h5>
                             </div>
                             <div class="card-body">
                                 <div class="alert alert-danger" *ngIf="loginError">
@@ -17,7 +17,7 @@
                                 <form #loginForm="ngForm" (submit)="onSubmit()">
                                     <div class="form-group">
                                         <label class="small mb-1">Login</label>
-                                        <input type="text"  name="username" [(ngModel)]="username"
+                                        <input type="text" name="username" [(ngModel)]="username"
                                             class="form-control py-4" placeholder="Digite seu login">
                                     </div>
                                     <div class="form-group">
@@ -30,20 +30,25 @@
                                         <input type="text" name="email" [(ngModel)]="email" *ngIf="cadastrando"
                                             class="form-control py-4" placeholder="Digite seu e-mail">
                                     </div>
-                                    <div class="form-group align-items-center justify-content-between mt-4 mb-0">
-                                        <button type="submit" class="btn btn-success" *ngIf="!cadastrando">
+                                    <div class="align-items-center justify-content-between mt-4 mb-0"
+                                        style="text-align: right">
+                                        <button type="submit" class="btn bg-color-padrao text-white"
+                                            *ngIf="!cadastrando">
                                             Entrar
                                         </button>
-                                        <button type="button" class="btn btn-success" *ngIf="cadastrando">
-                                            Cadastrar
-                                        </button>
-                                        <button type="button" (click)="cancelaCadastro()" class="btn btn-danger ml-1" *ngIf="cadastrando">
+                                        <button type="button" (click)="cancelaCadastro()" class="btn btn-danger"
+                                            *ngIf="cadastrando">
                                             Cancelar
                                         </button>
+                                        <button type="button" class="btn bg-color-padrao text-white ml-1"
+                                            *ngIf="cadastrando">
+                                            Cadastrar
+                                        </button>
+
                                     </div>
                                 </form>
                             </div>
-                            <div class="card-footer text-center">
+                            <div class="card-footer text-center bg-color-padrao">
                                 <div class="small">
                                     <a href="#" (click)="preparaCadastro($event)" class="text-light">
                                         Não possui Usuário? Cadastre aqui!
