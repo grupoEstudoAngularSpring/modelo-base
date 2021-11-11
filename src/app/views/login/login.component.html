@@ -2,12 +2,12 @@
     <div id="layoutAuthentication-content">
         <main>
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center"> 
                     <div class="col-lg-5">
-                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5 bg-color-padrao text-white">
                             <div class="card-header">
-                                <h3 class="text-center font-weight-light my-4">
-                                    {{ cadastrando ? 'Cadastro de Novo Usuário' : 'Entrar'}}
+                                <h3 class="text-center my-4">
+                                    {{ cadastrando ? 'Cadastro de Novo Usuário' : 'Fazer Login'}}
                                 </h3>
                             </div>
                             <div class="card-body">
@@ -17,7 +17,7 @@
                                 <form #loginForm="ngForm" (submit)="onSubmit()">
                                     <div class="form-group">
                                         <label class="small mb-1">Login</label>
-                                        <input type="text" name="username" [(ngModel)]="username"
+                                        <input type="text"  name="username" [(ngModel)]="username"
                                             class="form-control py-4" placeholder="Digite seu login">
                                     </div>
                                     <div class="form-group">
@@ -31,8 +31,8 @@
                                             class="form-control py-4" placeholder="Digite seu e-mail">
                                     </div>
                                     <div class="form-group align-items-center justify-content-between mt-4 mb-0">
-                                        <button type="submit" class="btn btn-primary" *ngIf="!cadastrando">
-                                            Enviar
+                                        <button type="submit" class="btn btn-success" *ngIf="!cadastrando">
+                                            Entrar
                                         </button>
                                         <button type="button" class="btn btn-success" *ngIf="cadastrando">
                                             Cadastrar
@@ -45,7 +45,7 @@
                             </div>
                             <div class="card-footer text-center">
                                 <div class="small">
-                                    <a href="#" (click)="preparaCadastro($event)">
+                                    <a href="#" (click)="preparaCadastro($event)" class="text-light">
                                         Não possui Usuário? Cadastre aqui!
                                     </a>
                                 </div>

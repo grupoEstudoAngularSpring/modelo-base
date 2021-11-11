@@ -9,7 +9,6 @@ import { ClienteModel } from '../models/cliente.model';
 })
 export class ClienteService {
    
-    ClienteModel;
     constructor(
         private http: HttpClient
     ) { }
