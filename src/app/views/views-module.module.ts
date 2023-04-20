@@ -15,6 +15,11 @@ import { TitleComponent } from '../components/title/title.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { TemplateModule } from '../components/template.module';
+import { ServicosComponent } from './servicos/servicos.component';
+import { ContatoComponent } from './contato/contato.component';
+import { PlanosComponent } from './planos/planos.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { ExemplosComponent } from './exemplos/exemplos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { TemplateModule } from '../components/template.module';
     ButtonComponent,
     TitleComponent,
     LoginComponent,
-    LayoutComponent
+    LayoutComponent,
+    ServicosComponent,
+    ContatoComponent,
+    PlanosComponent,
+    SobreComponent,
+    ExemplosComponent
 
   ],
   imports: [
